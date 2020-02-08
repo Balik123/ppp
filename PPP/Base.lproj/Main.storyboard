@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Id0-SL-K29">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainPPP View Controller-->
+        <scene sceneID="oxH-RF-8mK">
+            <objects>
+                <viewController id="Id0-SL-K29" customClass="mainPPPViewController" customModule="Perfect_Paper_Password" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h8S-4g-C9x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aVJ-pW-Fwq">
+                                <rect key="frame" x="20" y="44" width="374" height="593"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="E3A-ry-2s4">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Yj7-fH-kIr" customClass="cellPPPCollectionViewCell" customModule="Perfect_Paper_Password" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gwq-9x-bsH">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yy6-Yn-i8R">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Yy6-Yn-i8R" secondAttribute="bottom" constant="20" symbolic="YES" id="YrM-Sr-VDs"/>
+                                                <constraint firstItem="Yy6-Yn-i8R" firstAttribute="top" secondItem="gwq-9x-bsH" secondAttribute="top" constant="20" symbolic="YES" id="bem-eU-uUA"/>
+                                                <constraint firstItem="Yy6-Yn-i8R" firstAttribute="leading" secondItem="gwq-9x-bsH" secondAttribute="leading" constant="20" symbolic="YES" id="bhT-EH-eJf"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yy6-Yn-i8R" secondAttribute="trailing" constant="20" symbolic="YES" id="uYC-Tv-PHU"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="textPPP" destination="Yy6-Yn-i8R" id="IXm-h5-IMd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Id0-SL-K29" id="9qc-6w-5ky"/>
+                                    <outlet property="delegate" destination="Id0-SL-K29" id="0YN-Iq-vf8"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Scm-D1-f9m">
+                                <rect key="frame" x="20" y="673" width="374" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="NEA-aR-z5e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ION-Hs-vSz">
+                                <rect key="frame" x="93" y="761" width="228" height="42"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="iJx-im-Vt0"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Generar nueva llave" image="arrow.clockwise" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="getNewKey:" destination="Id0-SL-K29" eventType="touchUpInside" id="wQt-vr-noX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ION-Hs-vSz" firstAttribute="top" secondItem="Scm-D1-f9m" secondAttribute="bottom" constant="30" id="Cz9-4X-gII"/>
+                            <constraint firstItem="tHQ-fo-oKY" firstAttribute="trailing" secondItem="Scm-D1-f9m" secondAttribute="trailing" constant="20" id="OEr-du-OBa"/>
+                            <constraint firstItem="ION-Hs-vSz" firstAttribute="leading" secondItem="tHQ-fo-oKY" secondAttribute="leading" constant="93" id="PgD-eB-dqx"/>
+                            <constraint firstItem="tHQ-fo-oKY" firstAttribute="trailing" secondItem="ION-Hs-vSz" secondAttribute="trailing" constant="93" id="RdC-uv-s9L"/>
+                            <constraint firstItem="Scm-D1-f9m" firstAttribute="leading" secondItem="tHQ-fo-oKY" secondAttribute="leading" constant="20" id="YU5-hW-uCn"/>
+                            <constraint firstItem="tHQ-fo-oKY" firstAttribute="bottom" secondItem="ION-Hs-vSz" secondAttribute="bottom" constant="59" id="fGS-Yx-kLG"/>
+                            <constraint firstItem="ION-Hs-vSz" firstAttribute="top" secondItem="Scm-D1-f9m" secondAttribute="bottom" constant="30" id="rma-u6-Awo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tHQ-fo-oKY"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="aVJ-pW-Fwq" id="uQC-bO-c2W"/>
+                        <outlet property="key" destination="Scm-D1-f9m" id="R0a-Au-PLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bPc-lZ-8YU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="159"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+    </resources>
+</document>
