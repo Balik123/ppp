@@ -11,10 +11,11 @@ import UIKit
 import CryptoKit
 
 class mainPPPViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
-    let col = 6
-    let row = 10
+    let col = 4
+    let row = 6
     let numDiv = 4
     let miAlfabeto = "!#%+23456789:=?@ABCDEFGHJKLMNPRSTUVWXYZabcdefghijkmnopqrstuvwxyz"
+    
     let celdaID = "cell"
     let defaults = UserDefaults.standard
     var arrData:[String] = []
@@ -53,10 +54,12 @@ class mainPPPViewController: UIViewController, UICollectionViewDataSource, UICol
         else{
             key.text = data.getSequenceKey()
             defaults.set(data.getSequenceKey(), forKey: "sequenceKey")
+           
         }
         
         arrData =  getPPP()
     }
+    
     
     
     
@@ -110,6 +113,7 @@ class mainPPPViewController: UIViewController, UICollectionViewDataSource, UICol
     @IBAction func getNewKey(_ sender: Any) {
         defaults.removeObject(forKey: "sequenceKey")
         defaults.removeObject(forKey: "ppp")
+        
         self.viewWillAppear(true)
     }
     

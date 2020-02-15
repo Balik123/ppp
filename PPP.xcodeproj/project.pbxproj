@@ -18,6 +18,8 @@
 		0C323B5623EEB2920041303F /* stringSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C323B5523EEB2920041303F /* stringSeparator.swift */; };
 		0C323B5923EEB2C90041303F /* cellPPPCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C323B5823EEB2C90041303F /* cellPPPCollectionViewCell.swift */; };
 		0C323B5B23EEB2F20041303F /* mainPPPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C323B5A23EEB2F20041303F /* mainPPPViewController.swift */; };
+		0CA8C48923F3D0FA00AD5B9A /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8C48823F3D0FA00AD5B9A /* UInt128.swift */; };
+		0CA8C48B23F702BC00AD5B9A /* pseudoaleatorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA8C48A23F702BC00AD5B9A /* pseudoaleatorio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		0C323B5523EEB2920041303F /* stringSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringSeparator.swift; sourceTree = "<group>"; };
 		0C323B5823EEB2C90041303F /* cellPPPCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellPPPCollectionViewCell.swift; sourceTree = "<group>"; };
 		0C323B5A23EEB2F20041303F /* mainPPPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainPPPViewController.swift; sourceTree = "<group>"; };
+		0CA8C48823F3D0FA00AD5B9A /* UInt128.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UInt128.swift; sourceTree = "<group>"; };
+		0CA8C48A23F702BC00AD5B9A /* pseudoaleatorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pseudoaleatorio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +151,9 @@
 		0C323B5423EEB2790041303F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0CA8C48823F3D0FA00AD5B9A /* UInt128.swift */,
 				0C323B5523EEB2920041303F /* stringSeparator.swift */,
+				0CA8C48A23F702BC00AD5B9A /* pseudoaleatorio.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA8C48B23F702BC00AD5B9A /* pseudoaleatorio.swift in Sources */,
 				0C323B5B23EEB2F20041303F /* mainPPPViewController.swift in Sources */,
 				0C323B5623EEB2920041303F /* stringSeparator.swift in Sources */,
+				0CA8C48923F3D0FA00AD5B9A /* UInt128.swift in Sources */,
 				0C323B5323EEB25D0041303F /* genPPP.swift in Sources */,
 				0C323B5923EEB2C90041303F /* cellPPPCollectionViewCell.swift in Sources */,
 				0C323B2023EEB1F30041303F /* AppDelegate.swift in Sources */,

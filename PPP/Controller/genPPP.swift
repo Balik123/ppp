@@ -30,7 +30,7 @@ struct genPPP{
         var misDigitos: [String] = []
         var contador = 0
         while misDigitos.count < (col * row * numDiv) {
-            let textoCifrado = genClaves(contador: contador).separate(every: 2, with: ",")
+            let textoCifrado = genClaves().separate(every: 2, with: ",")
             let tempArray = textoCifrado.components(separatedBy: ",")
             for item in tempArray{
                 misDigitos.append(item)
@@ -59,12 +59,11 @@ struct genPPP{
     
  
     
-    func genClaves(contador: Int) -> String {
-        let contador = contador
-        let obtenerNum = createNum(num: contador)
+    func genClaves() -> String {
+        let obtenerNum = createNum()
         var myArray = [String]()
         
-        let mySealedBox = try? AES.GCM.seal(Data(obtenerNum.joined().utf8), using: key)
+        let mySealedBox = try? AES.GCM.seal(obtenerNum, using: key)
         let cifrado = mySealedBox?.ciphertext
         
         let cipherText = cifrado?.withUnsafeBytes{
@@ -96,21 +95,18 @@ struct genPPP{
     }
     
     
-    func createNum(num:Int) -> [String] {
-        var num = num
-        var miArr: [String] = []
-        for _ in 1...128{
-            let currenBit = num & 0x01
-            if currenBit != 0{
-                miArr.append("1")
+    func createNum() -> Data{
+            let currentTime = Date().toMillis()
+            let num: UInt128 = UInt128(currentTime!)
+            var uInt128toByn = String(num, radix: 2)
+            
+            while uInt128toByn.count < 128 {
+                uInt128toByn = "0" + uInt128toByn
             }
-            else{
-                miArr.append("0")
-            }
-            num >>= 1
+            
+            return Data(uInt128toByn.utf8)
         }
-           return miArr.reversed()
-    }
+
     
    
     
